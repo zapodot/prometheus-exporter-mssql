@@ -1,5 +1,5 @@
 # prometheus-exporter-mssql
-![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/zapodot/prometheus-exporter-mssql.svg) ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/zapodot/prometheus-exporter-mssql.svg) ![GitHub](https://img.shields.io/github/license/zapodot/prometheus-exporter-mssql.svg)
+[![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/zapodot/prometheus-exporter-mssql.svg)](//hub.docker.com/r/zapodot/prometheus-exporter-mssql) [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/zapodot/prometheus-exporter-mssql.svg)](//hub.docker.com/r/zapodot/prometheus-exporter-mssql) ![GitHub](https://img.shields.io/github/license/zapodot/prometheus-exporter-mssql.svg)
 
 Docker packaging for the Prometheus SQLServer exporter created by [DanielOliver](//github.com/DanielOliver/mssql_exporter).
 
