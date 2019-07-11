@@ -1,7 +1,8 @@
 # prometheus-exporter-mssql
 ![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/zapodot/prometheus-exporter-mssql.svg) ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/zapodot/prometheus-exporter-mssql.svg)
 
-Docker packaging for the Prometheus SQLServer exporter created by [DanielOliver](//github.com/DanielOliver/mssql_exporter)
+Docker packaging for the Prometheus SQLServer exporter created by [DanielOliver](//github.com/DanielOliver/mssql_exporter).
+
 The docker image is based on the [Google Cloud distroless dotnet](https://console.cloud.google.com/gcr/images/distroless/GLOBAL/dotnet?gcrImageListsize=30) image which should keep it small and relatively secure. 
 
 ## Exposed ports
