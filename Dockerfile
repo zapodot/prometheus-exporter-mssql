@@ -8,8 +8,6 @@ RUN echo "Downloading from ${DOWNLOAD_URI}" && mkdir target && curl -O -J -L ${D
 FROM gcr.io/distroless/dotnet
 LABEL maintainer="zapodot@gmail.com"
 VOLUME /data
-EXPOSE 8080
-ENV PROMETHEUS_MSSQL_DataSource="Server=tcp:localhost,1433;Initial Catalog=database;Persist Security Info=False;User ID=user;Password=password;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
 ENV PROMETHEUS_MSSQL_ConfigFile="/data/data.json"
 ENV PROMETHEUS_MSSQL_ServerPath="/metrics"
 ENV PROMETHEUS_MSSQL_ServerPort=8080
