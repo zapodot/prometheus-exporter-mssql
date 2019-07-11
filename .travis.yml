@@ -2,3 +2,12 @@ sudo: required
 language: python
 services:
 - docker
+
+script:
+- docker build -t prometheus-exporter-mssql .
+
+deploy:
+  provider: script
+  script: bash deploy
+  on:
+    branch: master
