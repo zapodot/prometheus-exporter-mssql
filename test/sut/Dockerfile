@@ -9,4 +9,4 @@ ENTRYPOINT [ "dockerize" ]
 WORKDIR /app
 ADD test.sh test.sh
 RUN ["chmod", "+x", "/app/test.sh"]
-CMD [ "-wait", "tcp://sqlserver:1433", "-wait", "http://prometheus:9090", "-wait", "http://prometheus-exporter-mssql:8080/metrics", "/app/test.sh" ]
+CMD [ "-timeout", "180s", "-wait", "tcp://sqlserver:1433", "-wait", "http://prometheus:9090", "-wait", "http://prometheus-exporter-mssql:8080/metrics", "/app/test.sh" ]
