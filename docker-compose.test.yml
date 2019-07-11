@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  prometheus:
+    image: prom/prometheus
+    ports: 
+      - 9090:9090
+    volumes: 
+      - ./test/prometheus:/etc/prometheus
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Test1234!
+  prometheus-exporter-mssql:
+    build: .
+    environment: 
+      - PROMETHEUS_MSSQL_DataSource=Server=tcp:sqlserver,1433;Initial Catalog=test;Persist Security Info=False;User ID=sa;Password=Test1234!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+      - PROMETHEUS_MSSQL_ConfigFile=/data/data.json
+    volumes: 
+      - ./test/prometheus-exporter-mssql:/data
+    depends_on: 
+      - prometheus
+      - sqlserver    
+  sut:
+    build: ./test/sut
+    depends_on: 
+      - prometheus
+      - prometheus-exporter-mssql
+      - sqlserver
