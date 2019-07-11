@@ -24,7 +24,7 @@ services:
       - sqlserver    
   sut:
     build: ./test/sut
-    depends_on: 
+    links: 
       - prometheus
       - prometheus-exporter-mssql
       - sqlserver
