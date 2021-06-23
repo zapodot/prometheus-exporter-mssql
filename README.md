@@ -3,7 +3,7 @@
 
 Docker packaging for the Prometheus SQLServer exporter created by [DanielOliver](//github.com/DanielOliver/mssql_exporter).
 
-__As Daniel is now publishing his own docker images this project is not needed anymore and is only kept her for historical reasons. It should be considered obsolete__
+__As Daniel is now publishing his own [docker images](https://hub.docker.com/r/danieloliver/mssql_exporter) this project is not needed anymore and is only kept her for historical reasons. It should be considered obsolete__
 
 The docker image is based on the [Google Cloud distroless dotnet](https://console.cloud.google.com/gcr/images/distroless/GLOBAL/dotnet?gcrImageListsize=30) image which should keep it small and relatively secure. 
 
