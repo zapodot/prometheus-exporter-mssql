@@ -28,4 +28,3 @@ All environment variables documented in [Daniel's readme file](://github.com/Dan
 | Volume         | Description                                     |
 | -------------- | ----------------------------------------------- |
 | /data          | mount point for configuration files             |
-
